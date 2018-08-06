@@ -4,12 +4,7 @@ gemspec
 
 gem 'anchorman', :platform => :mri
 
-# during development, do not release
-if ENV['TRAVIS']
-  gem 'jasmine-core', :git => 'http://github.com/jasmine/jasmine.git'
-else
-  gem 'jasmine-core', :path => '../jasmine'
-end
+gem 'jasmine-core', :git => 'http://github.com/jasmine/jasmine.git', :tag => 'v1.3.1'
 
 if ENV['RAILS_VERSION'] == "rails4"
   gem 'rack', '~> 1.6.0'
